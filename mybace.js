@@ -127,7 +127,7 @@ toCanvas.addEventListener('click',function(){
   const canvasW = canvas.getAttribute('width');
   const canvasH = canvas.getAttribute('height');
 
-  //DL
+  //DLボタン
   const canvasDL = document.getElementById('toDownload');
 
   canvasBg.onload = () => {
