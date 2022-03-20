@@ -137,7 +137,7 @@ toCanvas.addEventListener('click',function(){
     ctx.drawImage(canvasFace,0,0,canvasW,canvasH);
     ctx.drawImage(canvasEye,0,0,canvasW,canvasH);
     ctx.drawImage(canvasBeak,0,0,canvasW,canvasH);
-    //画像化とDL、サーバでしか動かない、ローカルではエラー
+    //画像URL化とDL、サーバでしか動かない、ローカルではエラー
     const dataURL = canvas.toDataURL();
     canvasDL.href = dataURL;
   }
@@ -157,7 +157,7 @@ cancell.addEventListener('click',function(){
   selctGroup.style.display = 'block';
 });
 
-//トップへスクロール
+//ライセンスへスクロール
 //スクロールポイントにoverflow-y: scrollのcssが必要
   const toLicense = document.getElementById('toLicense');
   const license = document.getElementById('license');
