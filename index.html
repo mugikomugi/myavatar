@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>インコアバタージェネレーター</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="sanitize.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="/avatar/favicon.ico" id="favicon">
+</head>
+<body>
+  <div class="wrapper">
+
+    <div class="inner">
+
+      <header class="header">
+        <h1><img src="image/title.png" alt="インコアバタージェネレーション"></h1>
+        <p class="intro">インコアバター合成ツールを作りました。ボディをベースに各パーツを自由に選ぶことが出来ます。<br>
+          ダウンロード画像形式はPNGです。アイコン、アバターなどご自由にお使いください。<br>
+          <span>（※ご利用の際は<a id="toLicense">ご利用条件</a>をご覧ください）</span>
+        </p>
+      </header>
+
+      <main class="main">
+
+        <div id="selctgroup">
+          <div class="prevBox">
+            <section class="prev_panel">
+              <h2>Preview</h2>
+              <div id="prev">
+                <img src="image/back/back_wh.svg" alt="" id="selectBack">
+                <img src="image/back/back_none.svg" alt="" id="selectDeco">
+                <img src="image/okame/rutino_okame.svg" alt="" id="selectBody">
+                <img src="image/eye/bace.svg" alt="" id="selectEye">
+                <img src="image/beak/okame_pink.svg" alt="" id="selectBeak">
+              </div>
+            </section>
+            <!-- //.prev_panel -->
+
+            <div class="parts">
+              <ul class="partsTab">
+                <li class="act" data-id="bace">ボディ</li>
+                <li data-id="eye">目</li>
+                <li data-id="beak">クチバシ</li>
+                <li data-id="back_gr">背景</li>
+                <li data-id="deco">装飾</li>
+              </ul>
+              <div class="partsBox">
+                <ul id="bace" class="actBox">
+                  <li v-for="item in faceLi">
+                    <img v-bind:src="item.faceImg" alt="">
+                    <p class="once" v-html="item.faceText"></p>
+                  </li>
+                </ul>
+                <ul id="eye">
+                  <li v-for="item in eyeLi">
+                    <img v-bind:src="item.eyeImg" alt="">
+                    <p class="once" v-html="item.eyeText"></p>
+                  </li>
+                </ul>
+                <ul id="beak">
+                  <li v-for="item in beakLi">
+                    <img v-bind:src="item.beakImg" alt="">
+                    <p class="once" v-html="item.beakText">オカメ(白)</p>
+                  </li>
+                </ul>
+                <ul id="back_gr">
+                  <li v-for="item in bakgrLi">
+                    <img v-bind:src="item.backImg" alt="">
+                    <p class="once" v-html="item.backText"></p>
+                  </li>
+                </ul>
+                <ul id="deco">
+                  <li v-for="item in dekoLi">
+                    <img v-bind:src="item.decoImg" alt="">
+                    <p class="once" v-html="item.decoText"></p>
+                  </li>
+                </ul>
+              </div>
+              <!-- //.partsBox -->
+            </div>
+            <!-- //.parts -->
+          </div>
+          <!-- //.prevBox -->
+
+          <div class="sizeBox">
+            <p class="selectSize"><span class="material-icons">circle</span>サイズを選んでください<br><span class="smallText">※デフォルトは300pxです</span></p>
+            <p class="sizeBtn" id="size08"><span class="material-icons">circle</span>80px</p>
+            <p class="sizeBtn" id="size15"><span class="material-icons">circle</span>150px</p>
+            <p class="sizeBtn sizeMaker" id="size30"><span class="material-icons">circle</span>300px</p>
+            <p class="sizeBtn" id="size50"><span class="material-icons">circle</span>500px</p>
+          </div>
+          <!-- //.sizeBox -->
+
+          <div class="toCanvas">
+            <p id="toCanvas">これで決定<span class="material-icons">navigate_next</span></p>
+          </div>
+        </div>
+        <!-- //#selctgroup-->
+
+        <!-- canvas表示 -->
+        <section id="canvasBox">
+          <h2 class="canvasTitle">Download</h2>
+          <div class="canvasBg">
+            <canvas id="canvasImg" width ="300" height="300"></canvas>
+          </div>
+          <p><a id="toDownload" href="" download="inko.png">ダウンロード<span class="material-icons">download</span></a></p>
+          <p id="toremake">選び直す<span class="material-icons">navigate_next</span></p>
+        </section>
+
+        <section class="explain">
+          <h2 class="titleH2">Explanation</h2>
+          <p>
+            javascriptとvue.jsを使って開発しました。素材はIllsutratorで自作しています。<br>
+            プレビュー画面はリアルタイムで変化がみたかったのでCSSでの切り替えで、決定ボタン後はcanvasよりjsで表示させました。
+          </p>
+          <h2 class="titleH2" id="license">License</h2>
+          <p>
+            ダウンロードした画像は個人・商用利用かつ良識の範囲内であれば基本的に自由にお使いいただけます（著作権は放棄しておりません）。二次使用・再配布などは不可となりますのでご注意ください。 また、第三者の権利を侵害したり、公序良俗に反する行為を行うようなアカウントおよびサイト、ブログでのご使用は固くお断りいたします。
+          </p>
+        </section>
+
+        <section class="linkBox">
+          <h2 class="titleH2">Link</h2>
+          <a class="toLink" href="https://spica.okamechan.com/creat/"><span class="material-icons">navigate_next</span>パスワード生成ジェネレーター</a>
+          <a class="toLink" href="https://spica.okamechan.com/qrcode/"><span class="material-icons">navigate_next</span>QRコード生成ジェネレーター</a>
+        </section>
+
+      </main>
+
+    </div>
+    <!-- //.inner -->
+    <footer class="footer">
+      <a href="https://github.com/mugikomugi/" class="footerImg"><img src="image/github.svg" alt=""></a>
+      <small>Copyright 2022 Mugikomugi All Rights Reserved.</small>
+    </footer>
+  </div>
+  <script src="vue.min.js"></script>
+  <script src="vue_parts.js"></script>
+  <script src="mybace.js"></script>
+</body>
+</html>

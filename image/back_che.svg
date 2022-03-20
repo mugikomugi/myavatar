@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="レイヤー_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" width="48px" height="48px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
+<g>
+	<rect fill="rgba( 198, 226, 248, 0.6)" width="4.129" height="48"/>
+	<rect x="8" fill="rgba( 198, 226, 248, 0.6)" width="4.129" height="48"/>
+	<rect x="16" fill="rgba( 198, 226, 248, 0.6)" width="4.129" height="48"/>
+	<rect x="24" fill="rgba( 198, 226, 248, 0.6)" width="4.129" height="48"/>
+	<rect x="32" fill="rgba( 198, 226, 248, 0.6)" width="4.129" height="48"/>
+	<rect x="40" fill="rgba( 198, 226, 248, 0.6)" width="4.129" height="48"/>
+	<rect y="39.871" fill="rgba( 198, 226, 248, 0.6)" width="48" height="4.129"/>
+	<rect y="31.871" fill="rgba( 198, 226, 248, 0.6)" width="48" height="4.129"/>
+	<rect y="23.871" fill="rgba( 198, 226, 248, 0.6)" width="48" height="4.129"/>
+	<rect y="15.871" fill="rgba( 198, 226, 248, 0.6)" width="48" height="4.129"/>
+	<rect y="7.871" fill="rgba( 198, 226, 248, 0.6)" width="48" height="4.129"/>
+	<rect fill="rgba( 198, 226, 248, 0.6)" width="48" height="4.129"/>
+</g>
+</svg>
